@@ -1,17 +1,17 @@
-import { useGlobalState } from "../../context/GlobalState"
+import { useGlobalState } from '../../context/GlobalState';
 
 const IncomeExpenses = () => {
-  const { transactions } = useGlobalState()
+  const { transactions } = useGlobalState();
 
-  const amount = transactions.map(transaction => transaction.amount)
+  const amount = transactions.map((transaction) => transaction.amount);
 
   const incomes = amount
-    .filter(item => item > 0)
-    .reduce((acc, item) => acc += item, 0)
+    .filter((item) => item > 0)
+    .reduce((acc, item) => (acc += item), 0);
 
-  const expenses = amount
-    .filter(item => item < 0)
-    .reduce((acc, item) => acc += item, 0) * -1
+  const expenses =
+    amount.filter((item) => item < 0).reduce((acc, item) => (acc += item), 0) *
+    -1;
 
   return (
     <section className="mb-[20px]">
@@ -24,7 +24,7 @@ const IncomeExpenses = () => {
         <p>${expenses}</p>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default IncomeExpenses
+export default IncomeExpenses;
