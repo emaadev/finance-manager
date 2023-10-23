@@ -8,9 +8,15 @@ const TransactionsList = () => {
     <div className="w-full">
       <h3 className="mb-[10px] text-[18px] font-bold">Transactions History</h3>
       <ul>
-        {transactions.map((transaction) => (
-          <TransactionItem key={transaction.id} transaction={transaction} />
-        ))}
+        {transactions[0] === undefined ? (
+          <p className="text-zinc-400 text-[12px] -mt-[5px]">
+            Waiting for an amount...
+          </p>
+        ) : (
+          transactions.map((transaction) => (
+            <TransactionItem key={transaction.id} transaction={transaction} />
+          ))
+        )}
       </ul>
     </div>
   );

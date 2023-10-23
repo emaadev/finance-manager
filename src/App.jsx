@@ -10,7 +10,7 @@ import ManagerChart from './components/transaction/ManagerChart';
 function App() {
   return (
     <GlobalProvider>
-      <section className="flex justify-center items-center bg-zinc-900 text-white font-poppins h-screen">
+      <section className="flex justify-center items-center bg-zinc-900 text-white font-poppins h-full sm:h-screen">
         <div className="flex justify-center items-center sm:justify-between sm:items-start flex-col sm:flex-row bg-zinc-700 m-[30px] py-[30px] px-[30px] rounded-[10px] w-[700px]">
           <div className="flex justify-start items-between flex-col w-full mr-0 sm:mr-[30px]">
             <header>
